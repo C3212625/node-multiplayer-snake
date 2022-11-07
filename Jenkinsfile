@@ -8,7 +8,7 @@ node ('ubuntu'){
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("amrit96/snake")
+        app = docker.build("C3212625/snake")
     }
     stage('Post-to-dockerhub') {
     
