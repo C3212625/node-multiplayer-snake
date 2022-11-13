@@ -1,4 +1,4 @@
-node ('ubuntu'){  
+node ('Ubuntu'){  
     def app
     stage('Cloning Git') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -8,11 +8,11 @@ node ('ubuntu'){
     stage('Build-and-Tag') {
     /* This builds the actual image; synonymous to
          * docker build on the command line */
-        app = docker.build("C3212625/snake")
+        app = docker.build("amrit96/snake")
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'C3212625') {
+     docker.withRegistry('https://registry.hub.docker.com', 'amrit96') {
             app.push("latest")
         			}
          }
