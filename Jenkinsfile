@@ -12,7 +12,7 @@ node ('ubuntu'){
     }
     stage('Post-to-dockerhub') {
     
-     docker.withRegistry('https://registry.hub.docker.com', 'amrit96') {
+     docker.withRegistry('https://registry.hub.docker.com', 'c3212625') {
             app.push("latest")
         			}
          }
